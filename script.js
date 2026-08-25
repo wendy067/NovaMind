@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const destino = link.textContent.toLowerCase();
 
             if (destino === "home") {
-                window.location.href = "home.html";
+                window.location.href = "index.html";
             } else if (destino === "recursos") {
                 window.location.href = "recursos.html"; 
             } else if (destino === "sobre") {
