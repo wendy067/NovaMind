@@ -25,3 +25,30 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     
 });
+
+
+const themeToggleButton = document.querySelector("#theme-toggle");
+const bodyElement = document.body;
+
+
+const savedTheme = localStorage.getItem("novaMind_theme");
+if (savedTheme === "dark") {
+    bodyElement.classList.add("dark-mode");
+    themeToggleButton.textContent = "☀️ Modo Claro";
+}
+
+themeToggleButton.addEventListener("click", () => {
+
+    bodyElement.classList.toggle("dark-mode");
+
+const isDarkModeActive = bodyElement.classList.contains("dark-mode");
+    if (isDarkModeActive) {
+        themeToggleButton.textContent = "☀️ Modo Claro";
+
+        localStorage.setItem("novaMind_theme", "dark");
+    } else {
+        themeToggleButton.textContent = "🌙 Modo Escuro";
+        // Atualizamos o localStorage para o padrão (light)
+        localStorage.setItem("novaMind_theme", "light");
+    }
+});

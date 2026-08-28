@@ -157,3 +157,39 @@ body {
     position: sticky;
     top: 40px;
 }
+
+.theme-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Estado de Tema Escuro Aplicado ao Body */
+body.dark-mode {
+    background-color: #0f172a;
+    /* Fundo geral bem escuro */
+    color: #f1f5f9;
+    /* Texto claro */
+}
+
+/* Inversão de cores dos cards e seções no modo escuro */
+body.dark-mode .hero,
+body.dark-mode .card {
+    background-color: #1e293b;
+    border-color: #334155;
+    color: #f1f5f9;
+}
+
+body.dark-mode .placeholder-img {
+    background: #0f172a;
+    border-color: #475569;
+}
